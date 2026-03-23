@@ -1,0 +1,20 @@
+dataset_params:
+  data_path: "/kaggle/input/datasets/theroyalseal/10kmph-dataset-and-mamba-architecture/csi_data_converted.npy"
+  window: 30
+
+diffusion_params:
+  num_timesteps: 100
+  beta_start: 0.0001
+  beta_end: 0.02
+
+model_params:
+  in_dim: 3072
+  hidden_dim: 128
+  num_layers: 4
+
+train_params:
+  task_name: "csi_diffusion"
+  batch_size: 32
+  num_epochs: 50
+  lr: 0.0003
+  ckpt_name: "mamba_ddpm.pth"
